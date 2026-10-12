@@ -1,0 +1,237 @@
+.calendar,
+.fechas-importantes-object {
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.calendar {
+  max-width: 450px;
+  width: 100%;
+  /* height: 420px; */
+  padding: 10px;
+  margin-left: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  position: relative;
+}
+
+.detalle-evento {
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.fechas-importantes-object {
+  width: 960px;
+  height: auto;
+  background-color: #D2D1D0;
+  display: flex;
+}
+
+.boton-scroll {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.boton-scroll:hover {
+  transform: scale(1.6);
+}
+
+.days-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.days-container div {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.month-days-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.month-days-container div {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.month-days-container div.other-month {
+  color: #999;
+}
+
+.month-days-container div.disabled {
+  pointer-events: none;
+  color: #ccc; 
+}
+
+
+.special-date {
+  background-color: #D2D1D0;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.special-date:hover {
+  transform: scale(1.1);
+}
+
+.empty-day {
+  visibility: hidden;
+}
+
+.fechas-importantes {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.cuerpo-calendario {
+  max-width: 1000px;
+  width: 1000px;
+  background-color: #1A0C0B;
+  border-radius: 8px;
+  margin: auto;
+  padding-left: 20px;
+}
+
+.fechas-importantes-block{
+  max-width: 480px;
+  width: 100%;
+  height: 420px;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #D2D1D0;
+  border-radius: 8px;
+  background-color: white;
+  position: relative;
+  overflow-y: scroll;
+}
+
+
+.details-container {
+  background: #D98282;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 25px;
+}
+.details-container.feriado {
+   background-color: #D2D1D0;
+}
+
+.details-container .detalle-style {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.feriados{
+  background-color: #89A9A8;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feriados:hover{
+  transform: scale(1.1);
+}
+
+.dia-actual {
+   font-weight: 700;
+   background-color: rgb(237, 237, 124);
+   transition: transform 0.3s ease-in-out;
+}
+.dia-actual:hover{
+  transform: scale(1.1);
+}
+.dia-actual.special-date {
+   background: linear-gradient(to bottom left, #D98282 50%, rgb(237, 237, 124) 50%);
+}
+.dia-actual.feriados {
+   background: linear-gradient(to bottom left, #89A9A8 50%, rgb(237, 237, 124) 50%);
+}
+.special-date.feriados {
+   background: linear-gradient(to bottom left, #D98282 50%, rgb(136, 168, 167) 50%);
+}
+.examenFebreroTecnicatura{
+  background-color: #AFAFDC;
+}
+.details-container.SanValentin{
+  background-color: pink;
+}
+.examenFebreroProfesorado{
+  background-color: #A4B8C4;
+}
+/* .dia-actual.special-dates.feriados{
+  background: linear-gradient(to bottom left,  #89A9A8 50%, #D98282 50%, rgb(237, 237, 124) 50%);
+} */
+
+@media (max-width: 960px) {
+    .calendar {
+        margin-left: 0;
+    }
+
+   /* html {
+      font-size: .8em;
+   } */
+  .fechas-importantes{
+    /* width: 90%; */
+    align-items: center;
+    display: flex;
+    margin: 0 .5rem;
+  }
+  .cuerpo-calendario{
+    text-align: center;
+    justify-content: center;
+  }
+  /* .calendar{
+    
+  }
+  .fechas-importantes-block{
+
+  } */
+  .fechas-importantes-object {
+      flex-direction: column;
+      width: 95%;
+      align-items: center;
+      gap: 1.5rem;
+  }
+}
