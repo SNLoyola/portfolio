@@ -6,9 +6,19 @@
   color: #fafafa;
 }
 
-.presentacion img {
-  width: 250px;
-  height: 250px;
+.presentacion p {
+  font-size: x-large;
+}
+
+.hability_item {
+  margin-right: 25px;
+}
+.hability_item img {
+  width: 150px;
+}
+
+.d1-display {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
